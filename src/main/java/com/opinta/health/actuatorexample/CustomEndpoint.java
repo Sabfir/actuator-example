@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 @Component
-@Endpoint(id = "healthcheck")
+@Endpoint(id = "opinta-check")
 public class CustomEndpoint {
 
     @ReadOperation
@@ -22,6 +22,6 @@ public class CustomEndpoint {
 //            return new Health.Builder(Status.DOWN).build();
 //        }
 
-        return new CustomCheckDto(Status.UP, "I was working, I'm working, I'll be back!", "OPINTA");
+        return new CustomCheckDto(Status.DOWN, "Who is responsible???", "Misha");
     }
 }
